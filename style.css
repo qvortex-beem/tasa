@@ -1,0 +1,394 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+h1,
+h2 {
+   font-weight: 700;
+}
+
+/* общая кнопка */
+.btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   padding: 18px 44px;
+   border-radius: 100px;
+   background: #bd4664;
+   color: #fff;
+   font-size: 15px;
+   cursor: pointer;
+   transition: opacity 0.2s;
+}
+
+.btn:hover {
+   opacity: 0.85;
+}
+
+.volkova {
+   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+   font-size: 16px;
+   line-height: 1.4;
+   color: #23222a;
+   background: #f0eef1;
+   max-width: 1920px;
+   padding: 0 60px;
+
+   /* шапка */
+   header {
+      position: sticky;
+      top: 20px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      height: 84px;
+      padding: 0 28px;
+      background: rgba(209, 156, 166, 0.85);
+      border-radius: 14px;
+      width: 100%;
+      backdrop-filter: blur(8px);
+   }
+
+   .logotype {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 500;
+   }
+
+   .logotype-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+   }
+
+   nav {
+      display: flex;
+      gap: 44px;
+      margin-left: 120px;
+   }
+
+   nav a {
+      font-size: 14px;
+   }
+
+   .num-btn {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-left: auto;
+   }
+
+   .num-btn a {
+      font-size: 14px;
+   }
+
+   .border-btn {
+      padding: 11px 22px;
+      border: 1px solid #23222a;
+      border-radius: 100px;
+      font-size: 13px;
+      cursor: pointer;
+      transition:
+         background 0.2s,
+         color 0.2s;
+   }
+
+   .border-btn:hover {
+      background: #bd4664;
+      border-color: #bd4664;
+      color: #fff;
+   }
+
+   /* 1. герой */
+   .hero {
+      margin-top: 40px;
+      min-height: 700px;
+      padding: 72px 80px;
+      border-radius: 20px;
+      background-color: #d19ca6;
+      background-image: url("imgs/hero.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 32px;
+   }
+
+   .hero .text h1 {
+      max-width: 700px;
+      font-size: 80px;
+      line-height: 0.95;
+      text-transform: uppercase;
+   }
+
+   .hero .text p {
+      margin-top: 20px;
+      max-width: 520px;
+      font-size: 17px;
+      color: #23222a;
+   }
+
+   /* 2. коллекции */
+   .collections {
+      margin-top: 140px;
+   }
+
+   .collections .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 48px;
+   }
+
+   .collections .header h1 {
+      font-size: 46px;
+      line-height: 1;
+      text-transform: uppercase;
+   }
+
+   .collections .header p {
+      max-width: 320px;
+      font-size: 15px;
+      color: rgba(35, 34, 42, 0.7);
+   }
+
+   .collections .family {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      padding: 24px 0;
+      border-top: 1px solid #d19ca6;
+   }
+
+   .collections .family:last-child {
+      border-bottom: 1px solid #d19ca6;
+   }
+
+   .collections .num {
+      width: 60px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #bd4664;
+   }
+
+   .collections .info h2 {
+      font-size: 32px;
+      font-weight: 600;
+   }
+
+   .collections .info p {
+      margin-top: 8px;
+      max-width: 360px;
+      font-size: 15px;
+      color: rgba(35, 34, 42, 0.7);
+   }
+
+   .collections .notes {
+      width: 240px;
+      padding: 10px 20px;
+      border: 1px solid #bd4664;
+      color: #bd4664;
+      border-radius: 100px;
+      font-size: 13px;
+      text-align: center;
+   }
+
+   .collections .family img {
+      display: block;
+      width: 280px;
+      height: 180px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: #d19ca6;
+   }
+
+   /* 3. хиты продаж */
+   .bestsellers {
+      margin-top: 140px;
+      padding: 64px 72px 72px;
+      border-radius: 20px;
+      background: #d19ca6;
+   }
+
+   .bestsellers .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 48px;
+   }
+
+   .bestsellers .header h2 {
+      font-size: 46px;
+      line-height: 1;
+      text-transform: uppercase;
+   }
+
+   .bestsellers .header p {
+      max-width: 320px;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #23222a;
+   }
+
+   .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px 24px;
+   }
+
+   .card img {
+      display: block;
+      width: 100%;
+      height: 420px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: #f0eef1;
+   }
+
+   .card h3 {
+      margin-top: 16px;
+      font-size: 20px;
+   }
+
+   .card p {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #23222a;
+   }
+
+   .card span {
+      display: block;
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 600;
+   }
+
+   .bestsellers .btn {
+      margin-top: 40px;
+   }
+}
+
+.laricheva {
+   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+   font-size: 16px;
+   line-height: 1.4;
+   color: #23222a;
+   background: #f0eef1;
+   max-width: 1920px;
+   padding: 20px 60px;
+
+   /* 4. о нас */
+   .about {
+      margin-top: 140px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 24px;
+   }
+
+   .about .header {
+      grid-column: 1 / 4;
+   }
+
+   .about .header h2 {
+      font-size: 46px;
+      line-height: 1;
+      text-transform: uppercase;
+   }
+
+   .about .item {
+      padding: 32px;
+      border-radius: 16px;
+      background: #d19ca6;
+      min-height: 220px;
+   }
+
+   .about .item h3 {
+      font-size: 22px;
+   }
+
+   .about .item p {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #23222a;
+   }
+
+   /* 5. призыв к действию */
+   .cta {
+      margin-top: 140px;
+      padding: 96px 40px;
+      border-radius: 20px;
+      background: #23222a;
+      color: #f0eef1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+   }
+
+   .cta h2 {
+      font-size: 56px;
+      line-height: 1;
+      text-transform: uppercase;
+   }
+
+   .cta p {
+      max-width: 480px;
+      font-size: 16px;
+      color: rgba(240, 238, 241, 0.7);
+   }
+
+   .cta .btn {
+      margin-top: 12px;
+      background: #bd4664;
+      color: #fff;
+   }
+
+   /* подвал */
+   footer {
+      margin-top: 60px;
+      padding: 48px 56px;
+      border-radius: 20px;
+      background: #d19ca6;
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1fr 1fr;
+      gap: 32px;
+   }
+
+   footer h3 {
+      font-size: 22px;
+   }
+
+   footer h4 {
+      margin-bottom: 14px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: rgba(35, 34, 42, 0.7);
+   }
+
+   footer .col p,
+   footer .col a {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+   }
+
+   footer .col a:hover {
+      text-decoration: underline;
+   }
+}
